@@ -299,6 +299,18 @@ Most snippets do not contain working code :-).
 <p id="summary">...</p>
 <table id="autotest">
   <tr>
+    <th>Puppet
+      <td class="puppet">
+	<pre><code>
+#This is interesting
+  node "foo.example.com" {
+    define foo($bar=$name, $test) {
+      package { 'tmux':
+        ensure =&gt; present,
+      }
+   }
+}</code></pre>
+  <tr>
     <th>Python
     <td class="python">
 <pre>
