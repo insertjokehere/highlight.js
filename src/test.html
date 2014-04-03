@@ -304,10 +304,23 @@ Most snippets do not contain working code :-).
 	<pre><code>
 #This is interesting
   node "foo.example.com" {
+
+   $test = "A thing for ${fqdn}"
+   $other = ['a', 'b']
+
     define foo($bar=$name, $test) {
       package { 'tmux':
         ensure =&gt; present,
       }
+
+      if ('a' in $other) {
+
+         User['root'] {
+            groups +&gt; ['sound']
+         }
+
+       }
+
    }
 }</code></pre>
   <tr>
